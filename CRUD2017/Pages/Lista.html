@@ -1,0 +1,142 @@
+﻿<div style="margin: 20px;">
+    <h3>Lista de Programadores</h3>
+    {{message}}
+    <br />
+    <br />
+    <a href="#!Add" class="btn btn-primary">Adcionar</a>
+    <br />
+    <br />
+    <table class="table table-condensed">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Skype</th>
+            <th>Telefone</th>
+            <th>Linkedin</th>            
+            <th>Portifolio</th>
+            <th>Disp. Horas</th>
+            <th>Hora</th>
+            <th>Pretensão</th>
+            <th>Endereço</th>
+            <th>Dados Bancarios</th>                    
+            <th>Nível de Conhecimentos</th>
+            <th></th>            
+        </tr>
+        <tr ng-repeat="x in progs ">
+            <td>{{x.cod_prog_id}}</td>
+            <td>{{x.nome_prog }}</td>
+            <td>{{x.skype_prog}}</td>
+            <td>{{x.celular}}</td>
+            <td>{{x.linkedin}}</td>
+            <td>{{x.portifolio}}</td>
+            <td>{{x.disp_horas}}</td>
+            <td>{{x.melhor_hora}}</td>
+            <td>{{x.pretensao_hora}}</td> 
+            <td>
+                <table style="text-align:justify; font-size:11px; border:1px solid silver;">
+                    <tr>
+                        <td>Cep</td>
+                        <td>Estado</td> 
+                        <td>Cidade</td>
+                    </tr>
+                    <tr>
+                        <td>{{x.cep}}</td>
+                        <td>{{x.estado}}</td>
+                        <td>{{x.cidade}}</td>                        
+                    </tr>
+                    <tr>
+                        <td>Bairro</td>
+                        <td>Logradouro</td>
+                        <td>Número</td>
+                    </tr>
+                    <tr>
+                        <td>{{x.bairro}}</td>
+                        <td>{{x.logradouro}}</td>
+                        <td>{{x.nro_residencia}}</td>
+                    </tr>
+
+                </table>
+            </td>
+            <td>
+                <table style="text-align:justify; font-size:11px; border:1px solid silver;">
+                    <tr>
+                        <td>Conta</td>
+                        <td>Agência</td>
+                        <td>Tipo de Conta</td>
+                        <td>Favorecido</td>
+                        <td>CPF</td>
+                    </tr> 
+                    <tr>
+                        <td>{{x.nro_conta}}</td>
+                        <td>{{x.nro_agencia}}</td>
+                        <td>{{x.tp_conta}}</td>
+                        <td>{{x.nome_Favorecido}}</td>
+                        <td>{{x.n_cpf}}</td>
+                    </tr>                   
+                </table>
+            </td>                      
+            <td>
+                <table style="text-align:justify; font-size:11px; border:1px solid silver; ">
+                    <tr>
+                        <td>Ionic:{{x.Ionic}}</td>
+                        <td>Android:{{x.Android}}</td>
+                        <td>IOS:{{x.IOS}}</td>
+                        <td>HTML:{{x.HTML}}</td>
+                        <td>CSS:{{x.CSS}}</td>
+                        <td>Bootstrap:{{x.Bootstrap}}</td>
+                    </tr>                    
+                    <tr>
+                        <td>Jquery:{{x.Jquery}}</td>
+                        <td>AngularJs:{{x.AngularJs}}</td>
+                        <td>Java:{{x.Java}}</td>
+                        <td>Photoshop:{{x.Photoshop}}</td>
+                        <td>C++:{{x.C_mais_mais}}</td>
+                        <td>Cake:{{x.Cake}}</td>
+                    </tr>                    
+                    <tr>
+                        <td>SEO:{{x.SEO}}</td>
+                        <td>Illustrator:{{x.Illustrator}}</td>
+                        <td>AspNetMVC: {{x.Cake}}</td>
+                        <td>Django:{{x.Django}}</td>
+                        <td>Majento:{{x.Majento}}</td>
+                        <td>PHP:{{x.PHP}}</td>
+                    </tr>
+                    <tr>
+                        <td>Wordpress:{{x.Wordpress}}</td>
+                        <td>Phyton:{{x.Phyton}}</td>
+                        <td>MySQLServer:{{x.MySQLServer}}</td>
+                        <td>Ruby:{{x.Ruby}}</td>
+                        <td>MySQL:{{x.MySQL}}</td>
+                        <td>Salesforce:{{x.Salesforce}}</td>
+                    </tr>                    
+                </table>
+            </td> 
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            
+                            <a href="#!Edit/{{x.cod_prog_id}}">
+                                <span class="glyphicon glyphicon-cog"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                            
+                            <a href="#/" ng-click="Delprogms(x.cod_prog_id)" ng-confirm-click="Tem certeza?">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                            
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td>                            
+                            <a href="#/DetailsCliente/{{}}">
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>      
+    </table>
+</div>

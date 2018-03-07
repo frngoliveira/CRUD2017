@@ -1,0 +1,554 @@
+﻿<div style="margin-left: 30px; width:700px; ">
+    <h3>Inclusão</h3>  
+       
+       
+    
+    <form name="CadastroProgrsForm" class="form-group-sm" ng-submit="AddCC(programers);">
+        <br />
+        <a href="#/?" class="btn btn-primary"> Voltar à pagina Inicial</a>         
+        <br />
+        <br />
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="Add#Programers">Programador</a></li>
+            <li><a data-toggle="tab" href="Add#divConhecimento">Conhecimento</a></li>
+            <li><a data-toggle="tab" href="Add#dbanc">Dados Bancário</a></li>
+            <li><a data-toggle="tab" href="Add#Enderecos">Endereços</a></li>
+        </ul>
+        <div class="tab-content">                        
+            <div id="Programers" class="tab-pane fade in active">
+                <h3>{{msg}}</h3>
+                <div class="form-group">
+                    <label for="programers">Nome Programador</label>
+                    <input display="Programador" name="Programador" type="text" class="form-control" ng-model="programers.nome_prog" required=""/>
+                   
+                    
+                </div>
+                <div class="form-group">
+                    <label for="programers.skype_prog">skype</label>
+                    <input type="text" class="form-control" ng-model="programers.skype_prog" required />
+                </div>
+                <div class="form-group">
+                    <label for="programers.celular">Celular</label>
+                    <input type="text" class="form-control" ng-model="programers.celular" required />
+                </div>
+                <div class="form-group">
+                    <label for="programers.linkedin">linkedin</label>
+                    <input type="text" class="form-control" ng-model="programers.linkedin" required />
+                </div>
+                <div class="form-group">
+                    <label for="programers.portifolio">Protifolio</label>
+                    <input type="text" class="form-control" ng-model="programers.portifolio" required />
+                </div>
+                <div class="form-group">
+                    <label for="programers.disp_horas">Disp. Horas</label>
+                    <select name="select" type="text" class="form-control" ng-model="programers.disp_horas" required>
+                        <option value="">Selecione</option>
+                        <option value="Até 4 horas por dia">Até 4 horas por dia</option>
+                        <option value="De 4 á 6 horas por dia" selected>De 4 á 6 horas por dia</option>
+                        <option value="De 6 á 8 horas por dia">De 6 á 8 horas por dia</option>
+                        <option value="Acima de 8 horas por dia">Acima de 8 horas por dia</option>
+                        <option value="Apenas finais de semana">Apenas finais de semana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="programers.melhor_hora">Melhor Hora</label>
+                    <select name="select" type="text" class="form-control" ng-model="programers.melhor_hora" required>
+                        <option value="">Selecione</option>
+                        <option value="Manhã (de 08:00 ás 12:00)">Manhã (de 08:00 ás 12:00)</option>
+                        <option value="Tarde (de 13:00 ás 18:00)">Tarde (de 13:00 ás 18:00)</option>
+                        <option value="Noite (de 19:00 as 22:00)">Noite (de 19:00 as 22:00)</option>
+                        <option value="Madrugada (de 22:00 em diante)">Madrugada (de 22:00 em diante)</option>
+                        <option value="Comercial (de 08:00 as 18:00)">Comercial (de 08:00 as 18:00)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="programers.pretensao_hora">Pretensão</label>
+                    <input type="text" class="form-control" ng-model="programers.pretensao_hora" required />
+                </div>
+            </div>
+
+            <div id="divConhecimento" class="tab-pane fade">
+                <h3>{{msgcon}}</h3>
+                <div class="col-sm-2">
+                    <label for="conhec.Ionic">Ionic</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Ionic" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Android">Android</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Android" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.IOS">IOS</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.IOS" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.HTML">HTML</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.HTML" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.CSS">CSS</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.CSS" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Jquery">Jquery</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Jquery" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.AngularJs">AngularJs</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.AngularJs" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Java">Java</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Java" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.AspNetMVC">Asp.Net</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.AspNetMVC" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.C_mais_mais">C++</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.C_mais_mais" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Cake">Cake</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Cake" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Django">Django</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Django" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Majento">Majento</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Majento" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.PHP">PHP</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.PHP" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Wordpress">Wordpress</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Wordpress" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Phyton">Phyton</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Phyton" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Ruby">Ruby</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Ruby" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.MySQL">MySQL</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.MySQL" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.MySQLServer">MSServer</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.MySQLServer" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Salesforce">Salesforce</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Salesforce" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Photoshop">Photoshop</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Photoshop" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Illustrator">Illustrator</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Illustrator" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.SEO">SEO</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.SEO" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label for="conhec.Bootstrap">Bootstrap</label>
+                    <select name="select" type="text" class="form-control input-sm" ng-model="conhec.Bootstrap" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <br />
+                </div>
+            </div>
+
+            <div id="dbanc" class="tab-pane fade">
+                <h3>{{dbanc}}</h3>
+                <div>
+                    <label for="dban.nro_agencia">Número Agência</label>
+                    <input type="text" class="form-control" ng-model="dban.nro_agencia" required />
+                </div>
+                <div>
+                    <label for="dban.nro_conta">Número da conta</label>
+                    <input type="text" class="form-control" ng-model="dban.nro_conta" required />
+                </div>
+                <div>
+                    <label for="dban.tp_conta">Tipo da conta</label>
+                    <select name="select" type="text" class="form-control" ng-model="dban.tp_conta" required>
+                        <option value="">Selecione</option>
+                        <option value="Conta Corrente">Conta Corrente</option>
+                        <option value="Conta Poupança">Conta Poupança</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dban.nome_Favorecido">Favorecido</label>
+                    <input type="text" class="form-control" ng-model="dban.nome_Favorecido" required />
+                </div>
+                <div>
+                    <label for="dban.n_cpf">Número CPF</label>
+                    <input type="text" class="form-control" ng-model="dban.n_cpf" required />
+                </div>
+                <br />
+            </div>
+                        
+            <div id="Enderecos" class="tab-pane fade">
+                <h3>{{Ender}}</h3>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="end.cep">Cep</label>
+                        <input type="text" class="form-control" ng-model="end.cep" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="end.logradouro">Logradouro</label>
+                        <input type="text" class="form-control" ng-model="end.logradouro" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="end.nro_residencia">Número</label>
+                        <input type="text" class="form-control" ng-model="end.nro_residencia" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="end.bairro">Bairro</label>
+                        <input type="text" class="form-control" ng-model="end.bairro" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="end.cidade">Cidade</label>
+                        <input type="text" class="form-control" ng-model="end.cidade" required />
+                    </div>
+                    <div>
+                        <label for="end.estado">Estado</label>
+                        <select name="select" type="text" class="form-control" ng-model="end.estado" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Adicionar" ng-disabled="" />
+        </div>
+    </form>    
+       
+</div>
+
