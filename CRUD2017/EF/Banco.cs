@@ -12,6 +12,7 @@ namespace CRUD2017.EF
 {
     public class Banco : DbContext
     {
+        //teste
         public Banco() : base("conexao") { }
         public DbSet<Programador> Programadores { get; set; }
         public DbSet<Conhecimento> Conhecimentos { get; set; }
